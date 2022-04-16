@@ -1,0 +1,543 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>НКТ - Выбор кабельной сборки </title>
+	
+
+<style type="text/css">
+
+body{
+	background:#fff 
+	repeat-x;
+	margin:0;
+	padding:0;
+	text-align:left;
+	color:#666;
+	font:15px/1.4em Arial,Helvetica,Geneva,sans-serif;	
+	}
+
+#wrap{
+	margin:0 auto;
+	text-align:left;
+	width:1400px;	
+	}
+
+#content{
+	background:#fff;
+	float:left;
+	width:1400px;
+	padding-right:10px;
+	padding-left:10px;
+	padding-top:10px;
+	overflow:hidden;
+	}
+	
+#footer { 
+  height: 20px;
+  width: 70%;
+  font-weight: ;
+  color: #efaa11;
+  margin-top: -20px;
+  background: #000; 
+  }
+  
+  #cable {display: inline;}
+
+.entry{margin-bottom:3em;}
+.bold {font-weight: bold;}
+
+ h4 {
+    background: #000; 
+	color: #efaa11; 
+	width: 70%;
+	}
+
+	
+	/*Всплывающий скриншот*/ 
+.thumbnail{  
+position: relative;  
+z-index: 0;  
+}  
+.thumbnail:hover{  
+background-color: transparent;  
+z-index: 50;  
+}  
+.thumbnail span{ /*CSS for enlarged image*/  
+position: absolute;  
+background-color: #000;  
+padding: 5px;  
+left: -1000px;  
+border: 1px solid white;  
+visibility: hidden;  
+color: #efaa11;  
+text-decoration: none;  
+border-radius: 4px 4px 4px 4px; 
+-moz-border-radius: 4px 4px 4px 4px; 
+-webkit-border-radius: 4px 4px 4px 4px; 
+}  
+.thumbnail span img{ /*CSS for enlarged image*/  
+border-width: 0;  
+padding: 2px;  
+}  
+.thumbnail:hover span{ /*CSS for enlarged image on hover*/  
+visibility: visible;  
+top: 0;  
+left: 60px; /*position where enlarged image should offset horizontally */  
+}  
+/*---------------------*/
+	
+	.p1 {
+	margin-left: 0%;
+}
+	.slct {
+	width: 100px;
+	}
+	
+</style>
+
+</head>
+
+<body>
+  <div id="wrap">
+    
+	<!---<div id="header">
+      <p>
+        <h1></h1><br />  
+      </p>
+    </div>--->
+    
+	<div id="content">
+       <b>Типы защиты:  </b>
+	    <a class="thumbnail" href="#">ТипА<span>Защита состоит из стальной плоской спирали, оплетки и 
+	                                           полиуретановой оболочки. Обеспечивает защиту от сжатия,
+                                               растяжения, кручения, истирания и других механических
+                                               воздействий. До +85ºС.<img src="img/TypeA.png" width="200"/></span></a>
+        
+	    <a class="thumbnail" href="#">ТипB<span>Защита состоит из гибкого шланга из нержавеющей стали.
+                                               Обеспечивает защиту от сжатия, истирания, механических
+											   воздействий и открытого огня. До +165ºС.<img src="img/TypeB.png" width="200"/></span></a>
+		 
+	    <a class="thumbnail" href="#">ТипG<span>Защита состоит из гибкого двухслойного резинового шланга со
+												слоем неопрена. Обеспечивает высокую стойкость к истиранию,
+												кручению, химическим веществам и маслам. Кабельные вводы
+								защищены. Подходит для наружного применения. До +100ºС.<img src="img/TypeG.png" width="200"/></span></a>
+								
+	    <a class="thumbnail" href="#">ТипM<span>Защита состоит из дополнительной ленты ферромагнетика, оплетки
+												и оболочки с малым выделением дыма и без галогенов.
+												Обеспечивает снижение электромагнитных излучений. Применяется
+							  для измерений с повышенными требованиями к ЭМС. До +85ºС.<img src="img/TypeM.png" width="200"/></span></a>
+	
+
+<div class="entry">
+		<h4>Cable type </h4>
+      <form>
+	  
+   <select id="frequency" name="frequency" size="11">
+    <option value="" style=color:red>--Частота--</option>
+    <option value="under6ghz"> До 6 ГГц </option>		
+    <option value="under18ghz"> До 18 ГГц </option>
+	<option value="under26ghz"> До 26.5 ГГц </option>
+	<option value="under40ghz"> До 40 ГГц </option>
+    <option value="under50ghz"> До 50 ГГц </option>	
+   </select>
+		
+   <select id="app" name="app" size="11">
+    <option value="">--Применение--</option>
+    <option value="app_lab"       class="under6ghz under18ghz under26ghz under40ghz under50ghz ">Лабораторное</option>
+    <option value="app_ind"       class="under6ghz under18ghz under26ghz ">Промышленное</option>
+    <option value="app_outdoor"   class="under6ghz under18ghz under26ghz ">Вне помещений</option>
+    <option value="app_hidef"     class="under6ghz under18ghz under26ghz ">Повышенная экранировка</option>          
+   </select>
+		
+   <select id="molding" name="molding" size="11">
+    <option value="">--Интенсивность изгибов--</option>
+    <option value="static_m"      class="app_lab app_ind app_outdoor app_hidef ">Статическое</option>
+    <option value="medium_m"      class="app_lab app_ind app_outdoor app_hidef ">Средняя</option>
+    <option value="high_m"        class="app_lab ">Высокая</option>         
+   </select>
+
+   <select id="deftype" name="deftype" size="11">
+    <option value="">--Тип защиты--</option>
+    <option value="TypeA"         class="app_lab ">Тип A</option>
+    <option value="TypeB"         class="app_ind ">Тип B</option>
+    <option value="TypeG"         class="app_outdoor ">Тип G</option>
+    <option value="TypeM"         class="app_hidef ">Тип M</option>
+	<option value="TypeNone"      class="app_lab\static_m app_lab\medium_m ">Без защиты</option>		  
+   </select>
+
+   <select id="loss" name="loss" size="11">
+    <option value="">--Потери--</option>
+    <option value="min_loss"      class="TypeA TypeB TypeG TypeM TypeNone ">Минимальные</option>
+    <option value="dnc_loss"      class="TypeA TypeB TypeG TypeM TypeNone ">Не важно</option>    		  
+   </select>
+   <br />
+   <select id="conn1" name="conn1" size="11">
+    <option value="">--Интерфейс #1--</option>
+    <option value="conn1_716"      class="under6ghz ">7/16</option>
+    <option value="conn1_bnc"      class="under6ghz ">BNC</option>    		  
+    <option value="conn1_n"        class="under6ghz under18ghz ">N</option>
+    <option value="conn1_sma"      class="under6ghz under18ghz ">SMA</option>  
+    <option value="conn1_35"       class="under6ghz under18ghz under26ghz ">3.5 mm</option>
+    <option value="conn1_35_plus"  class="under6ghz under18ghz under26ghz ">3.5 mm (Усиленный)</option>  
+    <option value="conn1_292"      class="under6ghz under18ghz under26ghz under40ghz ">2.92 mm</option>  
+    <option value="conn1_24"       class="under6ghz under18ghz under26ghz under40ghz under50ghz ">2.4 mm</option>
+    <option value="conn1_24_plus"  class="under6ghz under18ghz under26ghz under40ghz under50ghz ">2.4 mm (Усиленный)</option>   
+   </select>
+  
+   <select id="conn2" name="conn2" size="11">
+    <option value="">--Интерфейс #2--</option>
+    <option value="conn2_716"      class="under6ghz ">7/16</option>
+    <option value="conn2_bnc"      class="under6ghz ">BNC</option>    		  
+    <option value="conn2_n"        class="under6ghz under18ghz ">N</option>
+    <option value="conn2_sma"      class="under6ghz under18ghz ">SMA</option>  
+    <option value="conn2_35"       class="under6ghz under18ghz under26ghz ">3.5 mm</option>
+    <option value="conn2_35_plus"  class="under6ghz under18ghz under26ghz ">3.5 mm (Усиленный)</option>  
+    <option value="conn2_292"      class="under6ghz under18ghz under26ghz under40ghz ">2.92 mm</option>  
+    <option value="conn2_24"       class="under6ghz under18ghz under26ghz under40ghz under50ghz ">2.4 mm</option>
+    <option value="conn2_24_plus"  class="under6ghz under18ghz under26ghz under40ghz under50ghz ">2.4 mm (Усиленный)</option> 
+   </select>
+   
+   <select id="dia" name="dia" size="11">
+	<option value="">--Диаметр--</option>
+<option value="dia_min" class="conn1_716 conn1_bnc conn1_n conn1_sma conn1_35 conn1_35_plus conn1_292 conn1_24 conn1_24_plus ">Минимальный</option>
+<option value="dia_dnc" class="conn1_716 conn1_bnc conn1_n conn1_sma conn1_35 conn1_35_plus conn1_292 conn1_24 conn1_24_plus ">Не важно</option>	
+	</select>	
+		
+     <select id="e_class" name="e_class" size="11">
+  <option value="">--Класс сборки--</option>
+  <option value="eco_e_class" class="conn1_716 conn1_bnc conn1_n conn1_sma conn1_35 conn1_35_plus conn1_292 conn1_24 conn1_24_plus ">Экономичный</option>
+  <option value="hi_e_class" class="conn1_716 conn1_bnc conn1_n conn1_sma conn1_35 conn1_35_plus conn1_292 conn1_24 conn1_24_plus ">Высокого класса</option>   </select>	
+		
+
+		<select id="cable" name="cable" size="11" style=width:148px>
+          
+		  <option value="">--Кабель--</option>
+          
+		  <option value="ECO6A" class="under6ghz\app_lab\static_m\TypeNone\dnc_loss\conn1_bnc\eco_e_class  ">
+		  ECO-6A</option>	  
+		  
+		  <option value="ECO6B" class=" ">
+		  ECO-6B</option>
+		  
+		  <option value="ECO18" class=" ">
+		  ECO-18</option>	
+		
+		<option value="ST18A" class=" ">
+		  ST-18A</option>
+		
+		<option value="SF106" class=" ">
+		  SF106</option>
+		
+		<option value="SF106P" class=" ">
+		  SF106P</option>
+		
+		<option value="SF103" class=" ">
+		  SF103</option>
+		
+		<option value="SF102" class=" ">
+		  SF102</option>
+			
+		<option value="SF101" class=" ">
+		  SF101</option>
+		
+		<option value="SF101P" class=" ">
+		  SF101P</option>
+		
+		<option value="SF406" class=" ">
+		  SF406</option>
+		
+		<option value="SF404" class=" ">
+		  SF406</option>		
+		
+		<option value="SF104" class=" ">
+		SF104</option>
+		
+		<option value="SF104P" class=" ">
+		  SF104P</option>		
+
+		</select>	
+	
+		<!-----Начинаем таблицу с вилками-розетками-радио-раздел---------------------------------------->
+<div class="p1"> 
+	<table>
+	 <tr>
+	   <td>				
+		<table id="radio_con1" >
+		 <tr>
+	      <td>
+			<label><input id="radio_con1_0" type="radio" name="group_param" value="0">1 соединитель: male;  </label>
+		  </td>
+		 </tr>
+		 <tr>
+		  <td>
+			<label><input id="radio_con1_1" type="radio" name="group_param" value="1">1 соединитель: female;  </label>
+		  </td>
+		 </tr>
+		</table>		
+	   </td>
+	   <td>		
+		<table id="radio_con2" >
+		 <tr>
+		  <td>
+			<label><input id="radio_con2_0" type="radio" name="group_taram" value="0">2 соединитель: male;  </label>
+		  </td>
+		 </tr>
+		 <tr>
+		  <td>
+			<label><input id="radio_con2_1" type="radio" name="group_taram" value="1">2 соединитель: female;  </label>
+		  </td>
+	     </tr>
+		</table>			
+	   </td>
+	  </tr>
+	 </table>
+	
+	<div class='result'></div>			
+		
+</div>
+	
+	<!---Закончили радио-раздел------------------------------------------------------------------------->
+	
+      </form><br />
+	  
+	<!-----Начинаем выводить результат------------------------------------------------------------------>  
+<form onsubmit="return false" oninput="o.value = parseInt(a.value)">
+  <b>Введите длину в мм</b> <input name="a" type="number" step="1"> </br></br>
+ 
+  <b>РЕЗУЛЬТАТ:</b></br></br>
+        
+  <div contenteditable="false" style="min-height:50px; width:700px;" id="txtDiv">
+  Длина сборки: <output name="o"></output> мм;
+        <div id="frequency_txt"></div>
+        <div id="app_txt"></div>
+		<div id="molding_txt"></div>
+		<div id="deftype_txt"></div>
+		<div id="loss_txt"></div>
+        <div id="conn1_txt"></div>
+        <div id='result_radio_con1'></div>
+		<div id="conn2_txt"></div>
+		<div id='result_radio_con2'></div>
+		<div id="dia_txt"></div>
+		<div id="e_class_txt"></div>
+		<div id="cable_txt"></div>
+  </div><br /> 
+   <a href="" id="mailLink"><b>Отправить Запрос</b></a>  
+ </form>
+     <!----Закончили выводить результат--------------------------------------------------------------------->
+</div>
+
+<!--- <div id="footer">ZAO "NKT" 2014</div></br> --->
+		
+		<!----Можно сделать убирающийся текст---->
+		
+		<script>
+			function collapsElement(id) {
+			if ( document.getElementById(id).style.display != "none" ) {
+			document.getElementById(id).style.display = 'none';
+			}
+			else {
+			document.getElementById(id).style.display = '';
+			}
+			}
+		</script>
+
+          <a href="javascript:collapsElement('id1')" rel="nofollow" >All work and no play makes Jack a dull boy :)</a> 
+          <div style="display: none;" id="id1"> 
+            <p style="line-height: normal;">
+			 <font size="2">                 
+				Инструкции по использованию программы.<br /><br />
+		* Выбрать все параметры для отображения в разделе "Результат"<br />
+		* Отправить запрос<br />
+		* Кабель может быть отображен только при всех выбранных параметрах. 
+			 </font></p>						
+		  </div>
+ </div>
+    
+  <script type="text/javascript" src="js\jquery.min.js"></script>  
+  <script src="js\jquery.chained.js?v=0.9.9-dev" type="text/javascript" charset="utf-8"></script>
+  <script src="jquery.chained.remote.js?v=0.9.9" type="text/javascript" charset="utf-8"></script>
+  <!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
+  <script type="text/javascript" charset="utf-8">
+  $(function() {
+
+    /* For jquery.chained.js */
+    $("#app").chained("#frequency");
+    $("#molding").chained("#app");
+    $("#deftype").chained("#app, #molding");	
+	$("#loss").chained("#deftype");
+	$("#conn1").chained("#frequency");
+	$("#conn2").chained("#frequency");
+	$("#dia").chained("#conn1");
+	$("#e_class").chained("#conn1");
+	
+	
+	
+$("#cable").chained("#frequency, #app, #molding, #deftype, #loss, #conn1, #dia, #e_class"); 
+	
+    /*$("#c").chained("#a,#b");*/
+
+/* вывод параметра 1*/
+var frequency = document.getElementById("frequency"),
+          frequency_txt = document.getElementById("frequency_txt"),
+          freq_opt = {
+            under6ghz: "Частота: До 6 ГГц;  ",           
+			under18ghz: "Частота: До 18 ГГц;  ",
+			under26ghz: "Частота: До 26.5 ГГц;  ",
+			under40ghz: "Частота: До 40 ГГц;  ",
+			under50ghz: "Частота: До 50 ГГц;  ",	
+          }         
+      frequency.onchange = function(){
+        frequency_txt.innerHTML = freq_opt[this.value];
+      }	
+
+/* вывод параметра 2 */	  
+var app = document.getElementById("app"),
+          app_txt = document.getElementById("app_txt"),
+          app_opt = {
+            app_lab: "Применение: Лабораторное;  ",
+            app_ind: "Применение: Промышленное;  ",
+			app_outdoor: "Применение: Вне помещений;  ",
+			app_hidef: "Применение: Повышенная экранировка;  ",		
+          }         
+      app.onchange = function(){
+        app_txt.innerHTML = app_opt[this.value];
+      }		  
+
+	  /* вывод параметра 3 */	  
+var molding = document.getElementById("molding"),
+          molding_txt = document.getElementById("molding_txt"),
+          molding_opt = {
+            static_m: "Интенсивность изгибов: Статическое применение (Невысокая);  ",
+            medium_m: "Интенсивность изгибов: Средняя;  ",
+			high_m: "Интенсивность изгибов: Высокая;  ",					
+          }         
+      molding.onchange = function(){
+        molding_txt.innerHTML = molding_opt[this.value];
+      }
+	  
+	    /* вывод параметра 4 */	  
+var deftype = document.getElementById("deftype"),
+          deftype_txt = document.getElementById("deftype_txt"),
+          deftype_opt = {
+            TypeA: "Защита: Тип A;  ",
+            TypeB: "Защита: Тип B;  ",
+			TypeG: "Защита: Тип G;  ",
+			TypeM: "Защита: Тип M;  ",
+			TypeNone: "Защита: Без защиты;  ",			
+          }         
+      deftype.onchange = function(){
+        deftype_txt.innerHTML = deftype_opt[this.value];
+      }
+	  
+	/* вывод параметра 5-5 */	  
+var conn1 = document.getElementById("conn1"),
+          conn1_txt = document.getElementById("conn1_txt"),
+          conn1_opt = {
+            conn1_716: "Первый соединитель: 7/16;  ",
+            conn1_bnc: "Первый соединитель 1: BNC;  ",
+			conn1_n: "Первый соединитель: N;  ",
+			conn1_sma: "Первый соединитель: SMA;  ",
+			conn1_35: "Первый соединитель: 3.5 mm;  ",	
+            conn1_35_plus: "Первый соединитель: 3.5 mm (Усиленный);  ",
+            conn1_292: "Первый соединитель: 2.92 mm;  ",
+			conn1_24: "Первый соединитель: 2.4 mm;  ",
+			conn1_24_plus: "Первый соединитель: 2.4 mm (Усиленный);  ",						
+          }         
+      conn1.onchange = function(){
+        conn1_txt.innerHTML = conn1_opt[this.value];
+      }
+	  
+	  var conn2 = document.getElementById("conn2"),
+          conn2_txt = document.getElementById("conn2_txt"),
+          conn2_opt = {
+            conn2_716: "Второй соединитель: 7/16;  ",
+            conn2_bnc: "Второй соединитель: BNC;  ",
+			conn2_n: "Второй соединитель: N;  ",
+			conn2_sma: "Второй соединитель: SMA;  ",
+			conn2_35: "Второй соединитель: 3.5 mm;  ",	
+            conn2_35_plus: "Второй соединитель: 3.5 mm (Усиленный);  ",
+            conn2_292: "Второй соединитель: 2.92 mm;  ",
+			conn2_24: "Второй соединитель: 2.4 mm;  ",
+			conn2_24_plus: "Второй соединитель: 2.4 mm (Усиленный);  ",						
+          }         
+      conn2.onchange = function(){
+        conn2_txt.innerHTML = conn2_opt[this.value];
+      }
+	  
+var dia = document.getElementById("dia"),
+          dia_txt = document.getElementById("dia_txt"),
+          dia_opt = {
+            dia_min: "Диаметр кабеля: Минимальный; ",
+            dia_dnc:  "Диаметр кабеля: Не важно; ",							
+          }         
+      dia.onchange = function(){
+        dia_txt.innerHTML = dia_opt[this.value];
+      } 
+	  
+	 /* вывод параметра 6 */	  
+var e_class = document.getElementById("e_class"),
+          e_class_txt = document.getElementById("e_class_txt"),
+          e_class_opt = {
+            eco_e_class: "Класс кабельной сборки: Экономичный;  ",
+            hi_e_class:  "Класс кабельной сборки: Высокий;  ",							
+          }         
+      e_class.onchange = function(){
+        e_class_txt.innerHTML = e_class_opt[this.value];
+      } 
+	  
+  /* вывод параметра 7 */	  
+var cable = document.getElementById("cable"),
+          cable_txt = document.getElementById("cable_txt"),
+          cable_opt = {
+            ECO6A: "Кабель: ECO-6A;  ",
+            ECO6B: "Кабель: ECO-6B;  ",	
+			TL8A: "Кабель: TL-8A;  ",
+			ECO18: "Кабель: ECO-18;  ",
+			ST18A: "Кабель: ST-18A;  ",		
+			SF106: "Кабель: SF106;  ",
+			SF106P: "Кабель: SF106P;  ",
+			SF103: "Кабель: SF103;  ",
+			SF102: "Кабель: SF102;  ",
+			SF101: "Кабель: SF101;  ",
+			SF101P: "Кабель: SF101P;  ",
+			SF406: "Кабель: SF406;  ",
+			SF404: "Кабель: SF404;  ",	
+			SF104: "Кабель: SF104;  ",
+			SF104P: "Кабель: SF104P;  ",			
+          }         
+      cable.onchange = function(){
+        cable_txt.innerHTML = cable_opt[this.value];
+      } 	  
+  });
+  
+  
+  var ContentofDiv = $('#txtDiv').html();
+  
+  /* ПОЧТА */
+  document.getElementById('mailLink').onclick = function() {
+  var addr = 'vladimir.seredenko@nkt-rf.ru';
+  var body = document.getElementById('txtDiv').innerText; /*or .textContent*/
+  var subject = 'Запрос кабельной сборки';
+  
+  this.href = 'mailto:' + addr + '?subject=' + subject + '&body=' + body;
+}
+  
+  /* РАДИО */
+  
+  $(document).ready(function (){
+	$('input:radio').click(function (){
+		var val=$(this.parentNode).text();
+		var id=$(this).parents('table').attr('id');
+		id='result_'+id
+		$('#'+id).text(val);
+	});
+});
+
+  </script>
+ 
+</body>
+</html>
+<!--- ZAO "NKT" 2014 --- на основе jquery.chained --> 
+<!--GSV--->
